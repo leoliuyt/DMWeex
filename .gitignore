@@ -5,6 +5,8 @@
 ## Build generated
 DMWeex/platforms/ios/build/
 DMWeex/platforms/ios/DerivedData/
+DMWeexSingle/build/
+DMWeexSingle/DerivedData/
 
 ## Various settings
 *.pbxuser
@@ -15,7 +17,8 @@ DMWeex/platforms/ios/DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-platforms/ios/xcuserdata/
+DMWeex/platforms/ios/xcuserdata/
+DMWeexSingle/xcuserdata/
 
 ## Other
 *.moved-aside
@@ -35,6 +38,7 @@ platforms/ios/xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 DMWeex/platforms/ios/Pods/
+DMWeexSingle/Pods/
 
 # Carthage
 #
