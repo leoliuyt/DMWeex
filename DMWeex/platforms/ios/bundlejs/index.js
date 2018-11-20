@@ -280,8 +280,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("提交")]), _c('list', {
     staticClass: ["list"]
-  }, _vm._l((_vm.list), function(num) {
+  }, _vm._l((_vm.list), function(num, index) {
     return _c('cell', {
+      key: index,
       staticClass: ["cell"],
       appendAsTree: true,
       attrs: {

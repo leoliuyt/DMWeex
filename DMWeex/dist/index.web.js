@@ -21268,8 +21268,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "list",
     staticStyle: _vm.$processStyle(undefined),
     style: (_vm.$processStyle(undefined))
-  }, _vm._l((_vm.list), function(num) {
+  }, _vm._l((_vm.list), function(num, index) {
     return _c('cell', {
+      key: index,
       staticClass: "cell",
       staticStyle: _vm.$processStyle(undefined),
       style: (_vm.$processStyle(undefined))

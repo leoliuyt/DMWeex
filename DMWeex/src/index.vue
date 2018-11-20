@@ -10,7 +10,7 @@
       <li v-for="item in list">{{item}}</li>
     </ul> -->
     <list class="list">
-    <cell class="cell" v-for="num in list">
+    <cell class="cell" v-for="(num,index) in list" :key="index">
       <div class="panel">
         <text class="text">{{num}}</text>
       </div>
