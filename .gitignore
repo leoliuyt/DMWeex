@@ -67,3 +67,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 node_modules/
+DMWeex/platforms/ios/WeexDemo.xcworkspace/xcuserdata
+DMWeexSingle/DMWeexSingle.xcworkspace/xcuserdata

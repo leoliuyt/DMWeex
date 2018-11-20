@@ -66,74 +66,9 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(1)
-)
-
-/* template */
-var __vue_template__ = __webpack_require__(2)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/leoliu/Documents/Code/LL_Workspace/DMWeex/DMWeex/src/components/HelloWorld.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-469af010"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "message1": {
-    "color": "#FF0000"
-  }
-}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('text', {
-    staticClass: ["message1"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")]), _c('text', {
-    staticClass: ["message1"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")]), _c('text', {
-    staticClass: ["message1"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])])
-}]}
-module.exports.render._withStripped = true
-
-/***/ }),
+/* 0 */,
+/* 1 */,
+/* 2 */,
 /* 3 */,
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -199,6 +134,36 @@ module.exports = __vue_exports__
 /***/ (function(module, exports) {
 
 module.exports = {
+  "list": {
+    "width": "750",
+    "height": "800"
+  },
+  "panel": {
+    "width": "600",
+    "height": "300",
+    "marginLeft": "75",
+    "marginRight": "75",
+    "marginTop": "35",
+    "marginBottom": "35",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "borderWidth": "2",
+    "borderStyle": "solid",
+    "borderColor": "rgb(162,217,192)",
+    "backgroundColor": "rgba(162,217,192,0.2)"
+  },
+  "text": {
+    "fontSize": "88",
+    "textAlign": "center",
+    "color": "#41B883"
+  },
+  "input": {
+    "height": "80",
+    "width": "620",
+    "backgroundColor": "#F0F0F0",
+    "marginLeft": "30",
+    "marginRight": "100"
+  },
   "wrapper": {
     "justifyContent": "center",
     "alignItems": "center"
@@ -233,31 +198,56 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-var _HelloWorld = __webpack_require__(0);
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+// import HelloWorld from './components/HelloWorld'
 exports.default = {
   name: 'App',
   components: {
-    HelloWorld: _HelloWorld2.default
+    // HelloWorld
   },
   data: function data() {
     return {
-      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
+      // logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
+      list: [],
+      input_todo: ''
     };
+  },
+
+  methods: {
+    onchange: function onchange(event) {
+      console.log('onchange', event.value);
+    },
+    oninput: function oninput(event) {
+      console.log('oninput', event.value);
+    },
+    submitAction: function submitAction() {
+      console.log(this.input_todo);
+      this.list.push(this.input_todo);
+      this.input_todo = "";
+    }
   }
-}; //
-//
-//
-//
-//
-//
-//
-//
+};
 
 /***/ }),
 /* 8 */
@@ -266,14 +256,43 @@ exports.default = {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["wrapper"]
-  }, [_c('image', {
-    staticClass: ["logo"],
+  }, [_c('text', {
+    staticStyle: {
+      fontSize: "40px"
+    }
+  }, [_vm._v("oninput: " + _vm._s(_vm.input_todo))]), _c('input', {
+    staticClass: ["input"],
     attrs: {
-      "src": _vm.logo
+      "type": "text",
+      "placeholder": "Input Text",
+      "autofocus": true,
+      "value": (_vm.input_todo)
+    },
+    on: {
+      "change": _vm.onchange,
+      "input": [function($event) {
+        _vm.input_todo = $event.target.attr.value
+      }, _vm.oninput]
     }
   }), _c('text', {
-    staticClass: ["greeting"]
-  }, [_vm._v("The environment is ready!")]), _c('HelloWorld')], 1)
+    on: {
+      "click": _vm.submitAction
+    }
+  }, [_vm._v("提交")]), _c('list', {
+    staticClass: ["list"]
+  }, _vm._l((_vm.list), function(num) {
+    return _c('cell', {
+      staticClass: ["cell"],
+      appendAsTree: true,
+      attrs: {
+        "append": "tree"
+      }
+    }, [_c('div', {
+      staticClass: ["panel"]
+    }, [_c('text', {
+      staticClass: ["text"]
+    }, [_vm._v(_vm._s(num))])])])
+  }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

@@ -111,8 +111,23 @@ module.exports = __vue_exports__
 /***/ (function(module, exports) {
 
 module.exports = {
-  "message1": {
-    "color": "#FF0000"
+  "panel": {
+    "width": "600",
+    "height": "300",
+    "marginLeft": "75",
+    "marginTop": "35",
+    "marginBottom": "35",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "borderWidth": "2",
+    "borderStyle": "solid",
+    "borderColor": "rgb(162,217,192)",
+    "backgroundColor": "rgba(162,217,192,0.2)"
+  },
+  "text": {
+    "fontSize": "50",
+    "textAlign": "center",
+    "color": "#41B883"
   }
 }
 
@@ -123,13 +138,59 @@ module.exports = {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('text', {
-    staticClass: ["message1"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")]), _c('text', {
-    staticClass: ["message1"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")]), _c('text', {
-    staticClass: ["message1"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])])
+  return _c('list', {
+    staticClass: ["list"]
+  }, [_c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("First")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("Second")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("Third")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("Fourth")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("Fifth")])])])])
 }]}
 module.exports.render._withStripped = true
 
