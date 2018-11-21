@@ -35,6 +35,9 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -62,7 +65,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,11 +76,11 @@ var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(1)
+__vue_styles__.push(__webpack_require__(6)
 )
 
 /* template */
-var __vue_template__ = __webpack_require__(2)
+var __vue_template__ = __webpack_require__(8)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -89,7 +92,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/leoliu/Documents/Code/LL_Workspace/DMWeex/DMWeex/src/components/HelloWorld.vue"
+__vue_options__.__file = "/Users/liubaoqiu/Documents/Code/LLWorkspace/DMWeex/DMWeex/src/components/HelloWorld.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-469af010"
@@ -107,7 +110,27 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 1 */
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _HelloWorld = __webpack_require__(0);
+
+var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_HelloWorld2.default.el = '#root';
+new Vue(_HelloWorld2.default);
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -132,7 +155,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 2 */
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -193,22 +217,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Fifth")])])])])
 }]}
 module.exports.render._withStripped = true
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _HelloWorld = __webpack_require__(0);
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_HelloWorld2.default.el = '#root';
-new Vue(_HelloWorld2.default);
 
 /***/ })
 /******/ ]);

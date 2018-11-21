@@ -35,6 +35,9 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -62,45 +65,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _index = __webpack_require__(5);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_index2.default.el = '#root';
-new Vue(_index2.default);
-
-/***/ }),
-/* 5 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(6)
+__vue_styles__.push(__webpack_require__(5)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(7)
+__vue_exports__ = __webpack_require__(4)
 
 /* template */
-var __vue_template__ = __webpack_require__(8)
+var __vue_template__ = __webpack_require__(7)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -112,7 +96,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/leoliu/Documents/Code/LL_Workspace/DMWeex/DMWeex/src/index.vue"
+__vue_options__.__file = "/Users/liubaoqiu/Documents/Code/LLWorkspace/DMWeex/DMWeex/src/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-2964abc9"
@@ -130,66 +114,24 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
+/* 2 */,
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {
-  "list": {
-    "width": "750",
-    "height": "800"
-  },
-  "panel": {
-    "width": "600",
-    "height": "300",
-    "marginLeft": "75",
-    "marginRight": "75",
-    "marginTop": "35",
-    "marginBottom": "35",
-    "flexDirection": "column",
-    "justifyContent": "center",
-    "borderWidth": "2",
-    "borderStyle": "solid",
-    "borderColor": "rgb(162,217,192)",
-    "backgroundColor": "rgba(162,217,192,0.2)"
-  },
-  "text": {
-    "fontSize": "88",
-    "textAlign": "center",
-    "color": "#41B883"
-  },
-  "input": {
-    "height": "80",
-    "width": "620",
-    "backgroundColor": "#F0F0F0",
-    "marginLeft": "30",
-    "marginRight": "100"
-  },
-  "wrapper": {
-    "justifyContent": "center",
-    "alignItems": "center"
-  },
-  "logo": {
-    "width": "424",
-    "height": "200"
-  },
-  "greeting": {
-    "textAlign": "center",
-    "marginTop": "70",
-    "fontSize": "50",
-    "color": "#41B883"
-  },
-  "message": {
-    "marginTop": "30",
-    "marginRight": "30",
-    "marginBottom": "30",
-    "marginLeft": "30",
-    "fontSize": "32",
-    "color": "#727272"
-  }
-}
+"use strict";
+
+
+var _index = __webpack_require__(1);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_index2.default.el = '#root';
+new Vue(_index2.default);
 
 /***/ }),
-/* 7 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,10 +140,6 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
 //
 //
 //
@@ -250,18 +188,83 @@ exports.default = {
 };
 
 /***/ }),
-/* 8 */
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "wrapper": {
+    "width": "750",
+    "height": "1334",
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "flex-start",
+    "alignItems": "center",
+    "background": "#F0F0F0"
+  },
+  "wrapper-item0": {
+    "width": "750",
+    "height": "120",
+    "background": "orange",
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "space-around",
+    "alignItems": "center"
+  },
+  "wrapper-item0-left": {
+    "width": 85,
+    "height": "80",
+    "background": "orange",
+    "paddingLeft": "30",
+    "paddingRight": "20"
+  },
+  "wrapper-item0-right": {
+    "width": 15,
+    "paddingLeft": "20"
+  },
+  "wrapper-item1": {
+    "width": "750",
+    "height": "1214"
+  },
+  "panel": {
+    "width": "600",
+    "height": "300",
+    "marginLeft": "75",
+    "marginRight": "75",
+    "marginTop": "35",
+    "marginBottom": "35",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "borderWidth": "2",
+    "borderStyle": "solid",
+    "borderColor": "rgb(162,217,192)",
+    "backgroundColor": "rgba(162,217,192,0.2)"
+  },
+  "text": {
+    "fontSize": "88",
+    "textAlign": "center",
+    "color": "#41B883"
+  },
+  "input": {
+    "height": "80",
+    "width": "620",
+    "backgroundColor": "#F0F0F0",
+    "marginLeft": "30",
+    "marginRight": "100"
+  }
+}
+
+/***/ }),
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["wrapper"]
-  }, [_c('text', {
-    staticStyle: {
-      fontSize: "40px"
-    }
-  }, [_vm._v("oninput: " + _vm._s(_vm.input_todo))]), _c('input', {
-    staticClass: ["input"],
+  }, [_c('div', {
+    staticClass: ["wrapper-item0"]
+  }, [_c('input', {
+    staticClass: ["wrapper-item0-left"],
     attrs: {
       "type": "text",
       "placeholder": "Input Text",
@@ -275,11 +278,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }, _vm.oninput]
     }
   }), _c('text', {
+    staticClass: ["wrapper-item0-right"],
     on: {
       "click": _vm.submitAction
     }
-  }, [_vm._v("提交")]), _c('list', {
-    staticClass: ["list"]
+  }, [_vm._v("提交")])]), _c('list', {
+    staticClass: ["wrapper-item1"]
   }, _vm._l((_vm.list), function(num, index) {
     return _c('cell', {
       key: index,
